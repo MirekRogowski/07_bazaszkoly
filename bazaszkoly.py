@@ -17,6 +17,9 @@ class Classroom:
             print(f"Klasa:  {data_school[c].class_name} - Wychowawca: {data_school[c].tutor} "
                   f"\nUczniowie:  {data_school[c].students} ")
 
+    # def __repr__(self) -> str:
+    #      return f"Classrom: '{self.class_name}, {self.students}, {self.tutor}, {self.subjects}, {self.teachers}"
+
 
 def input_class_name():
     input_class_name = input("Podaj nazwę klasy: ")
@@ -48,6 +51,9 @@ class Student:
                 for item in range(len(data_school[c].teachers)):
                     print(f"Nauczyciel - {data_school[c].teachers[item]} - {data_school[c].subjects[item]} ")
 
+    # def __repr__(self) -> str:
+    #      return f"Students: '{self.name}, {self.class_name}"
+
 
 class Teacher:
     def __init__(self, name):
@@ -61,8 +67,6 @@ class Teacher:
         self.class_names = input_class_name()
         # add teacher and subject
         for c in self.class_names:
-            # data_school[c].teachers = self.name
-            # data_school[c].subjects = self.subject
             data_school[c].teachers.append([self.name])
             data_school[c].subjects.append(self.subject)
 
@@ -72,6 +76,9 @@ class Teacher:
             print(f"Nauczyciel - {self.name} - {self.subject},  klasy: {self.class_names}")
             for c in self.class_names:
                print(f"Wychowawca - {data_school[c].tutor}, klasa: {data_school[c].class_name}")
+
+    # def __repr__(self) -> str:
+    #     return f"Teacher: '{self.name}, {self.subject}, {self.class_names}"
 
 
 class Tutor:
@@ -93,6 +100,8 @@ class Tutor:
             print(f"Wychowawca {data_school[c].tutor} - klasa:{data_school[c].class_name} ")
             print(f"Uczniowie {data_school[c].students}")
 
+    # def __repr__(self) -> str:
+    #     return f"Tutor: '{self.name}, {self.class_names}"
 
 while True:
     user_type = input(("Podaj typ użytkownika: "))
@@ -115,11 +124,18 @@ while True:
 
     data_school[user_name] = person
 
+# # print(data_school)
+# dictionary_items = data_school.items()
 
-# for item in data_school.items():
-#     print(item)
+for item in data_school.items():
+    print(item)
 
-print("_"*60)
+
+# for key, object in data_school.items():
+#     print(key)
+#     for attribute, value in object.class_name:
+#         print(f"{attribute} : {value}")
+
 if len(sys.argv) == 2:
     phrase = sys.argv[1]
     print("_" * 60)
