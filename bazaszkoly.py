@@ -115,3 +115,12 @@ while True:
 
     data_school[user_name] = person
 
+
+# for item in data_school.items():
+#     print(item)
+
+print("_"*60)
+if len(sys.argv) == 2:
+    phrase = sys.argv[1]
+    print("_" * 60)
+    data_school[phrase].display()
