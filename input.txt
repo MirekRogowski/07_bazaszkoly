@@ -1,0 +1,61 @@
+wychowawca
+Adam Mickiewicz
+1
+3
+
+wychowawca
+Jan Kowalski
+4
+2
+
+uczen
+Miroslaw Rogowski
+1
+uczen
+Robert Lewandowski
+1
+uczen
+Jerzy  Nowak
+4
+uczen
+Jan Polak
+4
+uczen
+Piotr Zielinski
+2
+uczen
+Piotr Wysocki
+2
+uczen
+Piotr Nowak
+3
+uczen
+Jan Weiss
+3
+nauczyciel
+Richard Feyman
+fizyka
+1
+4
+
+nauczyciel
+Jan Nowak
+matematyka
+1
+3
+2
+
+nauczyciel
+Arleta Kurz
+Geografia
+1
+2
+3
+4
+
+koniec
+
+
+
+
+
