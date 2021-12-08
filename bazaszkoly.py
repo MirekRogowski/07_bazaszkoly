@@ -81,10 +81,17 @@ class Tutor:
         self.name = name
         self.class_names = []
 
+    #metoda, wywołuje  funkcje input_class_name(), która przypisze wartości zwrcone przez funkcja
+    #do atrybutu tej klasy
     def get_classes(self):
         self.class_names = input_class_name()
         for c in self.class_names:
             data_school[c].tutor = self.name
+
+    def display(self):
+        for c in self.class_names:
+            print(f"Wychowawca {data_school[c].tutor} - klasa:{data_school[c].class_name} ")
+            print(f"Uczniowie {data_school[c].students}")
 
 
 while True:
@@ -106,4 +113,5 @@ while True:
         print("Nieprawidłowy typ uzytkownika: ")
         break
 
+    data_school[user_name] = person
 
