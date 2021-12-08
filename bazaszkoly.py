@@ -1,6 +1,7 @@
 import sys
 
 data_school = {}
+action = ["uczen", "nauczyciel", "wychowawca", "koniec" ]
 
 
 class Classroom:
@@ -103,6 +104,8 @@ class Tutor:
     # def __repr__(self) -> str:
     #     return f"Tutor: '{self.name}, {self.class_names}"
 
+
+print(f"\nDostępne akcje: {action }")
 while True:
     user_type = input(("Podaj typ użytkownika: "))
     if user_type == "koniec" or user_type == "k":
@@ -120,6 +123,8 @@ while True:
         person.get_classes()
     else:
         print("Nieprawidłowy typ uzytkownika: ")
+        print(f"\nDozwolone akcje: {action }")        
+
         break
 
     data_school[user_name] = person
