@@ -36,12 +36,21 @@ class Student:
 
 
 class Teacher:
-
     def __init__(self, name):
-        print("create techaer - nauczyciel\n")
+        print("Create Techaer")
         self.name = name
-        self.subject = ""
+        self.subject = " "
         self.class_names = []
+
+    def get_classes(self):
+        self.subject = input("Podaj nazwę przedmiotu: ")
+        self.class_names = input_class_name()
+        # add teacher and subject
+        for c in self.class_names:
+            # data_school[c].teachers = self.name
+            # data_school[c].subjects = self.subject
+            data_school[c].teachers.append([self.name])
+            data_school[c].subjects.append(self.subject)
 
 
 class Tutor:
@@ -50,6 +59,11 @@ class Tutor:
         print("Create Tutor")
         self.name = name
         self.class_names = []
+
+    def get_classes(self):
+        self.class_names = input_class_name()
+        for c in self.class_names:
+            data_school[c].tutor = self.name
 
 
 while True:
@@ -60,6 +74,12 @@ while True:
     user_name = input("Wprowadź imie i nazwisko: ")
     if user_type == "uczen" or user_type == "u":
         person = Student(user_name)
+        person.get_classes()
+    elif user_type == "nauczyciel" or user_type == "n":
+        person = Teacher(user_name)
+        person.get_classes()
+    elif user_type == "wychowawca" or user_type == "w":
+        person = Tutor(user_name)
         person.get_classes()
     else:
         print("Nieprawidłowy typ uzytkownika: ")
